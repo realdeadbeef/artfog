@@ -5,19 +5,17 @@ on:
   - pull_request
 
 jobs:
-  compile-sketches:
+  compile-sketche:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # See: https://github.com/arduino/compile-sketches#readme
       - name: Compile sketche
         uses: arduino/compile-sketches@v1
         with:
-          fqbn: arduino:mbed:nano33ble
           sketch-paths: |
-            - .
+            - ./
           libraries: |
             - name: ArtNet
