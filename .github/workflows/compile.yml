@@ -15,7 +15,8 @@ jobs:
       - name: Compile sketche
         uses: arduino/compile-sketches@v1
         with:
+          fqbn: arduino:avr:uno
           sketch-paths: |
-            - ./
+            ./
           libraries: |
             - name: ArtNet
